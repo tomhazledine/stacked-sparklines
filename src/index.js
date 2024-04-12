@@ -13,7 +13,7 @@ class StackedSparklines extends HTMLElement {
         //     options.components = JSON.parse(components);
         // }
         // picobel(options);
-        console.log("StackedSparklines connected");
+        console.log("StackedSparklines connected, y'all!");
     }
 }
 

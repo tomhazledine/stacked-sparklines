@@ -1,1 +1,0 @@
-var e=class extends HTMLElement{constructor(){super()}connectedCallback(){let t=this.classList[0]||"default",o={theme:this.getAttribute("data-theme")||t,context:this};console.log("StackedSparklines connected")}};typeof window<"u"&&"customElements"in window&&window.customElements.define("stacked-sparklines",e);
