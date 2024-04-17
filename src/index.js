@@ -1,28 +1,17 @@
 import { StackedSparklines } from "./core";
 
-import { data } from "./test-data";
+import { getOptions } from "./utils";
 
-// Create a class for the element
 class StackedSparklinesComponent extends HTMLElement {
     constructor() {
         super();
     }
 
     connectedCallback() {
-        const className = this.classList[0] || "default";
-        const caption = this.getAttribute("data-caption") || false;
-        const background = this.getAttribute("data-background") || "#fff000";
-        const foreground = this.getAttribute("data-foreground") || "#000fff";
-        const margin = this.getAttribute("data-margin") || 0.5;
-        const scale = this.getAttribute("data-scale") || 1;
-        const size = this.getAttribute("data-size") || 400;
-        const dataMax = this.getAttribute("data-max") || null;
-        const dataMin = this.getAttribute("data-min") || null;
-        const rowHeight = this.getAttribute("data-row-height") || 20;
-        const baseline = this.getAttribute("data-baseline") || false;
-        const labelLeft = this.getAttribute("data-label-left") || "";
-        const labelRight = this.getAttribute("data-label-right") || "";
+        // Get the options from the element's attributes
+        const options = getOptions(this);
 
+        // Get the data from the element's data-data attribute and validate it
         let rawData;
         try {
             rawData = JSON.parse(this.getAttribute("data-data")) || [[]];
@@ -39,23 +28,13 @@ class StackedSparklinesComponent extends HTMLElement {
             return;
         }
 
+        // Get the complete graph
         const output = StackedSparklines({
-            // data: rawData,
-            data,
-            className,
-            size,
-            scale,
-            margin,
-            rowHeight,
-            baseline,
-            labelLeft,
-            labelRight,
-            caption,
-            dataMax,
-            dataMin,
-            background,
-            foreground
+            data: rawData,
+            ...options
         });
+
+        // Render the graph
         this.innerHTML = output;
     }
 }
