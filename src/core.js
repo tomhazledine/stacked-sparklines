@@ -26,11 +26,16 @@ export const StackedSparklines = options => {
         .range([0, layout.width]);
 
     const rowGap = layout.height / (options.data.length - 1);
+    const rowHeightMultiplier =
+        options.rowHeightMultiplier ?? (options.data.length * 2) / 100;
+    const rowHeight = layout.height * rowHeightMultiplier;
 
     const rows = options.data
+        // Reverse #1: ensure first row appears at top of graph
+        .reverse()
         .map((row, i) => {
             const rowBaseline = layout.height - i * rowGap;
-            const yRange = [rowBaseline, rowBaseline - options.rowHeight];
+            const yRange = [rowBaseline, rowBaseline - rowHeight];
 
             const yScale = scaleLinear()
                 .domain([dataMin, dataMax])
@@ -46,6 +51,7 @@ export const StackedSparklines = options => {
 
             return { line: lineGenerator(row), area: areaGenerator(row) };
         })
+        // Reverse #2: render top to bottom to ensure overlaps are correct
         .reverse();
 
     const viewBox = `${-layout.margin} ${-layout.margin} ${

@@ -2,8 +2,6 @@ import * as esbuild from "esbuild";
 import { parseArgs, getPackageVersion, watchFiles } from "./build.utils.js";
 import config from "./config.js";
 
-const version = getPackageVersion();
-
 const args = parseArgs(process.argv);
 
 const globalConfig = {

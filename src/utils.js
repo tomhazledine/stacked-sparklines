@@ -8,7 +8,7 @@ export const getOptions = target => ({
     size: target.getAttribute("data-size") || 400,
     dataMax: target.getAttribute("data-max") || null,
     dataMin: target.getAttribute("data-min") || null,
-    rowHeight: target.getAttribute("data-row-height") || 20,
+    rowHeight: target.getAttribute("data-row-height") || null,
     baseline: target.getAttribute("data-baseline") || false,
     labelLeft: target.getAttribute("data-label-left") || "",
     labelRight: target.getAttribute("data-label-right") || ""
