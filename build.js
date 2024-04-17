@@ -34,7 +34,7 @@ const build = async buildConfig => {
 
 if (args.mode === "development") {
     // Development mode
-    watchFiles(["src/js"], async file => {
+    watchFiles(["src"], async file => {
         console.log(`Changes detected in ${file}.\nRebuilding...`);
         await build(buildConfig);
         console.log("Build complete.");
