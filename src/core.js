@@ -1,4 +1,5 @@
-import { area, line, scaleLinear } from "d3";
+import { scaleLinear } from "d3-scale";
+import { area, line } from "d3-shape";
 
 import { renderGraph } from "./build-svg";
 
