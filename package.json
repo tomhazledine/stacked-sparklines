@@ -11,8 +11,17 @@
         "prepublish": "npm run build",
         "prepublishOnly": "npm run build"
     },
-    "author": "",
-    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/tomhazledine/stacked-sparklines.git"
+    },
+    "author": {
+        "name": "Tom Hazledine",
+        "email": "tom@tomhazledine.com",
+        "url": "https://tomhazledine.com"
+    },
+    "homepage": "https://github.com/tomhazledine/stacked-sparklines#readme",
+    "license": "MIT",
     "devDependencies": {
         "@babel/core": "^7.24.4",
         "@babel/preset-env": "^7.24.4",

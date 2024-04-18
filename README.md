@@ -2,7 +2,7 @@
 
 A [web component](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) for creating a graph that shows a set of stacked [sparklines](https://en.wikipedia.org/wiki/Sparkline).
 
-## Basic usage
+## Basic example
 
 ```html
 <stacked-sparklines data-data="DATA_GOES_HERE" caption="Example data" data-background="#00b7c6" data-foreground="white">
@@ -57,7 +57,7 @@ Once you've included the stacked-sparklines module in your project, you can use 
 
 ### `-data` (required)
 
-Without any data, the component won't render anything. The data should be a string of comma-separated numbers. For example:
+Without any data, the component won't render anything. The data should be a nested 2D array of numbers. For example:
 
 ```html
 <stacked-sparklines data-data="[[1,2,3,4],[5,6,7,8]]"></stacked-sparklines>
