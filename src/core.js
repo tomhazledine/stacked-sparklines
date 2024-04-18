@@ -27,8 +27,10 @@ export const StackedSparklines = options => {
 
     const rowGap = layout.height / (options.data.length - 1);
     const rowHeightMultiplier =
-        options.rowHeightMultiplier ?? (options.data.length * 2) / 100;
+        options.rowHeight ?? (options.data.length * 2) / 100;
     const rowHeight = layout.height * rowHeightMultiplier;
+
+    console.log({ options, layout, rowHeightMultiplier, rowHeight });
 
     const rows = options.data
         // Reverse #1: ensure first row appears at top of graph
