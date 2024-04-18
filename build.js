@@ -2,6 +2,8 @@ import * as esbuild from "esbuild";
 import { parseArgs, getPackageVersion, watchFiles } from "./build.utils.js";
 import config from "./config.js";
 
+const version = getPackageVersion();
+
 const args = parseArgs(process.argv);
 
 const globalConfig = {
@@ -16,6 +18,7 @@ const buildConfig = {
     ...globalConfig,
     format: "esm",
     entryPoints: [{ out: config.slug, in: "src/index.js" }],
+    entryNames: `stacked-sparklines.${version}`,
     loader: { ".css": "text" }
 };
 
