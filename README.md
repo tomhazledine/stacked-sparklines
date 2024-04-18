@@ -9,4 +9,4 @@ A [web component](https://developer.mozilla.org/en-US/docs/Web/API/Web_component
 </stacked-sparklines>
 ```
 
-![Example graph showing two lines, one dropping, one rising](./images/demo01.svg)
+![Example graph showing two lines, one dropping, one rising](https://github.com/tomhazledine/stacked-sparklines/blob/main/images/demo01.svg)
