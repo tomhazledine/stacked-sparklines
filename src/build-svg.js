@@ -15,17 +15,26 @@ const renderRow = ({ area, line, className, background, foreground }) => {
     </g>`;
 };
 
-const renderCaption = ({ caption, className, layout, foreground }) => {
-    if (!caption) return "";
+const renderCaption = ({
+    caption,
+    captionHtml,
+    className,
+    layout,
+    foreground
+}) => {
+    if (!caption && !captionHtml) return "";
 
-    return `<foreignObject
-                    x="0"
-                    y="${layout.height + layout.margin * 0.1}"
-                    width="${layout.width}"
-                    height="${layout.margin - layout.margin * 0.1}"
-                    ><div class="${className}__caption" style="font-size: ${Math.floor(
-        layout.height / 12
-    )}px;text-align: center;color: ${foreground};" ><p>${caption}</p></div></foreignObject>`;
+    const y = layout.height + layout.margin * 0.1;
+    const fontSize = Math.floor(layout.height / 12);
+
+    if (captionHtml) {
+        const height = layout.margin - layout.margin * 0.1;
+        return `<foreignObject x="0" y="${y}" width="${layout.width}" height="${height}" ><div class="${className}__caption" style="font-size: ${fontSize}px;text-align: center;color: ${foreground};" ><p>${captionHtml}</p></div></foreignObject>`;
+    }
+
+    return `<text class="${className}__caption" x="${
+        layout.width / 2
+    }" y="${y}" fill="${foreground}" font-size="${fontSize}" text-anchor="middle" alignment-baseline="hanging">${caption}</text>`;
 };
 
 const renderLabel = ({ layout, text, alignment, className, foreground }) => {
@@ -72,5 +81,5 @@ export const renderGraph = options => {
 
     const { className, size, viewBox, background } = options;
 
-    return `<svg class="${className}" width="${size}" viewBox="${viewBox}" preserveAspectRatio="none" style="background-color: ${background}">${components}</svg>`;
+    return `<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" class="${className}" width="${size}" height="${size}" viewBox="${viewBox}" preserveAspectRatio="none" style="background-color: ${background}">${components}</svg>`;
 };

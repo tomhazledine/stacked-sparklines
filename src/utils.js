@@ -1,6 +1,7 @@
 export const getOptions = target => ({
     className: target.classList[0] || "default",
     caption: target.getAttribute("data-caption") || false,
+    captionHtml: target.getAttribute("data-caption-html") || false,
     background: target.getAttribute("data-background") || "#fff000",
     foreground: target.getAttribute("data-foreground") || "#000fff",
     margin: target.getAttribute("data-margin") || 0.5,
