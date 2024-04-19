@@ -3,3 +3,8 @@ demo/*
 images/*
 node_modules/*
 .DS_Store
+
+# Ignore all files in the build directory
+build/*
+# But keep the main index
+!build/stacked-sparklines.js

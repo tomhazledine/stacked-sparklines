@@ -17,8 +17,10 @@ const globalConfig = {
 const buildConfig = {
     ...globalConfig,
     format: "esm",
-    entryPoints: [{ out: config.slug, in: "src/index.js" }],
-    entryNames: `stacked-sparklines.${version}`,
+    entryPoints: [
+        { out: `${config.slug}.${version}`, in: "src/index.js" },
+        { out: config.slug, in: "src/index.js" }
+    ],
     loader: { ".css": "text" }
 };
 
