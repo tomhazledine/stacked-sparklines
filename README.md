@@ -61,7 +61,7 @@ All options are set as attributes on the `<stacked-sparklines>` element. For exa
 <stacked-sparklines data-data="[[1,2,3,4],[5,6,7,8]]" data-caption="Example data"></stacked-sparklines>
 ```
 
-### `data` (required)
+### `data-data` (required)
 
 This is the data that will be rendered into the SVG graph. We're drawing a stack of lines, so the `data` option expects an array of arrays (one array for each line to be drawn).
 
@@ -75,23 +75,23 @@ The data should be provided as a string that can be parsed into a JavaScript arr
 
 If no data is provided, the component won't render anything.
 
-### `caption`
+### `data-caption`
 
 This is a string that will be rendered as a caption below the graph.
 
-### `caption-html`
+### `data-caption-html`
 
 This is a string that will be rendered as a caption below the graph. It will be rendered as HTML, so you can include links, formatting-tags, etc.
 
-### `background` and `foreground`
+### `data-background` and `data-foreground`
 
 These are the colours that will be used for the graph's background and foreground. They can be provided as any value that would be accepted by CSS (e.g. `#00b7c6`, `rgb(0,183,198)`, `hsl(185,100%,39%)`, `--custom-property-name`, etc.).
 
-### `size`
+### `data-size`
 
-This is the size of the graph. It defines the percentage of the available space that the graph will take up, so should be a number between `0` and `1` (e.g. `0.5` for 50% of the available space).
+This is the size of the graph, in pixels. The graphs are square, so this value defines both the `width` and `height` of the rendered SVG.
 
-### `margin`
+### `data-margin`
 
 This is the margin around the graph. It defines the percentage margin rendered around the outside of the graph, so should be a number between `0` and `1` (e.g. `0.1` for 10% margin).
 
@@ -139,7 +139,8 @@ The default class name is `"default"`.
 
 Replace `PREFIX` with the class name you've applied to the stacked-sparklines element.
 
-* `.PREFIX`: the root element
+* `.PREFIX`: the root element (a.k.a. the `<stacked-sparklines>` component itself)
+* `.PREFIX__inner`: the `<svg>` element (the direct child of the `<stacked-sparklines>` component)
 * `.PREFIX__area`: the area under the lines
 * `.PREFIX__line`: the lines themselves
 * `.PREFIX__caption`: the caption below the graph (optional) 

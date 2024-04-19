@@ -81,5 +81,5 @@ export const renderGraph = options => {
 
     const { className, size, viewBox, background } = options;
 
-    return `<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" class="${className}" width="${size}" height="${size}" viewBox="${viewBox}" preserveAspectRatio="none" style="background-color: ${background}">${components}</svg>`;
+    return `<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" class="${className}__inner" width="${size}" height="${size}" viewBox="${viewBox}" preserveAspectRatio="none" style="background-color: ${background}">${components}</svg>`;
 };
