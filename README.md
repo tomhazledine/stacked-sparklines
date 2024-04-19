@@ -133,7 +133,7 @@ The stacked-sparklines component will inherit any `class` value applied to it.
 
 This class name will be used as the prefix for all internal class names, following [Block Element Modifier (BEM)](https://css-tricks.com/bem-101/) conventions.
 
-The default class name is `"default"`.
+The default class name is `"stacked-sparklines"`.
 
 ### Provided class names
 

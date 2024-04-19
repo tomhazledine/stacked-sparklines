@@ -1,5 +1,5 @@
 export const getOptions = target => ({
-    className: target.classList[0] || "default",
+    className: target.classList[0] || "stacked-sparklines",
     caption: target.getAttribute("data-caption") || false,
     captionHtml: target.getAttribute("data-caption-html") || false,
     background: target.getAttribute("data-background") || "#efeeeb",
