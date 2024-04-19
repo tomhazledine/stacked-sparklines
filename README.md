@@ -10,7 +10,27 @@ A [web component](https://developer.mozilla.org/en-US/docs/Web/API/Web_component
 </stacked-sparklines>
 ```
 
-![Example graph showing two lines, one dropping, one rising](https://github.com/tomhazledine/stacked-sparklines/blob/main/images/demo01.svg)
+![Example graph showing fifteen lines, each following a randomly-noisy approximation of a normal distribution](https://github.com/tomhazledine/stacked-sparklines/blob/main/images/demo01.svg)
+
+## Fancy example
+
+```html
+<stacked-sparklines
+    data-data="DATA_GOES_HERE" 
+    data-size="600"
+    data-baseline="0"
+    data-scale="4"
+    data-row-height="0.2"
+    data-margin="0.4"
+    data-label-left="CP 1919"
+    data-label-right="318 MHz"
+    data-caption='Fig #1: Extract from "Radio Observations of the Pulse Profiles and Dispersion Measures of Twelve Pulsars" by Harold D. Carft, Jr.'
+>
+    <!-- fallback content -->
+</stacked-sparklines>
+```
+
+<img src="https://github.com/tomhazledine/stacked-sparklines/blob/main/images/demo02.svg" alt='An SVG recreation of the Pulsar data graph used as the source/inspiration for the cover art of Joy Division’s “Unknown Pleasures” record. Chart shows 80 lines stacked closely on top of each other, each mostly flat but with some spikes in the middle third. The graph has generous margins and is labelled “CP 1919” and “318 MHz”. There is a caption as part of the graphic: “Fig #1: Extract from Radio Observations of the Pulse Profiles and Dispersion Measures of Twelve Pulsars by Harold D. Carft, Jr.' width="300" height="300"/>
 
 ## Installation
 
