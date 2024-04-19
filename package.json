@@ -1,6 +1,6 @@
 {
     "name": "stacked-sparklines",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "description": "SVG stacked sparklines web component",
     "main": "./build/stacked-sparklines.js",
     "type": "module",
