@@ -30,7 +30,7 @@ A [web component](https://developer.mozilla.org/en-US/docs/Web/API/Web_component
 </stacked-sparklines>
 ```
 
-<img src="https://github.com/tomhazledine/stacked-sparklines/blob/main/images/demo02.svg" alt='An SVG recreation of the Pulsar data graph used as the source/inspiration for the cover art of Joy Division’s “Unknown Pleasures” record. Chart shows 80 lines stacked closely on top of each other, each mostly flat but with some spikes in the middle third. The graph has generous margins and is labelled “CP 1919” and “318 MHz”. There is a caption as part of the graphic: “Fig #1: Extract from Radio Observations of the Pulse Profiles and Dispersion Measures of Twelve Pulsars by Harold D. Carft, Jr.' width="300" height="300"/>
+<img src="https://github.com/tomhazledine/stacked-sparklines/blob/main/images/demo02.png" alt='An SVG recreation of the Pulsar data graph used as the source/inspiration for the cover art of Joy Division’s “Unknown Pleasures” record. Chart shows 80 lines stacked closely on top of each other, each mostly flat but with some spikes in the middle third. The graph has generous margins and is labelled “CP 1919” and “318 MHz”. There is a caption as part of the graphic: “Fig #1: Extract from Radio Observations of the Pulse Profiles and Dispersion Measures of Twelve Pulsars by Harold D. Carft, Jr.' width="300" height="300"/>
 
 ## Installation
 
@@ -59,8 +59,8 @@ import "stacked-sparklines";
 If you prefer not to use npm, you can include the stacked-sparklines build file directly:
 
 ```html
-<!-- Load Picobel -->
-<script type='text/javascript' src='https://raw.githubusercontent.com/tomhazledine/stacked-sparklines/main/build/stacked-sparklines.0.0.1.js'></script>
+<!-- Load stacked-sparklines -->
+<script type='text/javascript' src='https://raw.githubusercontent.com/tomhazledine/stacked-sparklines/main/build/stacked-sparklines.0.0.6.js'></script>
 ```
 
 ### Use the component in your markup
