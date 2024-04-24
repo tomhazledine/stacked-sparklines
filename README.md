@@ -2,6 +2,8 @@
 
 A [web component](https://developer.mozilla.org/en-US/docs/Web/API/Web_components) for creating a graph that shows a set of stacked [sparklines](https://en.wikipedia.org/wiki/Sparkline).
 
+View in-depth demos with example code on the [stacked-sparklines blog post](https://tomhazledine.com/stacked-sparklines-web-component/).
+
 ## Basic example
 
 ```html
